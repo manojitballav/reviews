@@ -8,10 +8,19 @@ def homepage():
     the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
     return """
-    <h1>Hello Mono</h1>
+    <h1>Review</h1>
     <p>It is currently {time}.</p>
+    <label for="service">Choose a service:</label>
+        <select name="service" id="st">
+            <option value="scraping">scraping</option>
+            <option value="download">Download</option>
+        </select>
+    <label for="platform">Choose a service:</label>
+        <select name="platform" id="pf">
+            <option value="Amazon">Amazon</option>
+            <option value="Flipkart">Flipkart</option>
+        </select>
 
-    <img src="http://loremflickr.com/600/400">
     """.format(time=the_time)
 
 if __name__ == '__main__':
