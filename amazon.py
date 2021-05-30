@@ -3,6 +3,10 @@ import re,time
 from pymongo import MongoClient
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.options import Options
+
+options = Options()
+options.headless = True
 
 # database connections
 client = MongoClient('127.0.0.1',27017)
@@ -18,7 +22,7 @@ def number(devdata):
     ram = data[2]
     rom = data[3]
     color = data[4]
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(chrome_options=options)
     try:
         driver.get('https://www.amazon.in/product-reviews/'+pc+'/ref=cm_cr_arp_d_viewopt_sr?ie=UTF8&amp%3BshowViewpoints=1&filterByStar=one_star&pageNumber=1&sortBy=recent')
         # driver.implicitly_wait(3)
@@ -110,5 +114,5 @@ def number(devdata):
     except Exception as e:
         print(e)
         pass
-    reviewnumber = [oner,twor,threer,fourr,fiver]
+    reviewnumber = [{oner},{twor},{threer},{fourr},{fiver}]
     return(reviewnumber)
