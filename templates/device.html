@@ -4,6 +4,29 @@
 
 <tr>{{data}}</tr>
 
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">1 star</th>
+        <th scope="col">2 star</th>
+        <th scope="col">3 star</th>
+        <th scope="col">4 star</th>
+        <th scope="col">5 star</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{data[0]}}</td>
+        <td>{{data[1]}}</td>
+        <td>{{data[2]}}</td>
+        <td>{{data[3]}}</td>
+        <td>{{data[4]}}</td>
+      </tr>
+    </tbody>
+  </table>
+
 <!-- <tr> Name is {{data}}</tr>
 {% for dict_item in data %}
     <p>{{dict_item}}</p>
