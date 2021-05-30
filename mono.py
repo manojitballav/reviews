@@ -7,6 +7,7 @@ from flask import render_template,request, redirect, url_for
 
 # custom modules
 from insertpc import *
+from amazon import *
 
 
 data= []
@@ -31,6 +32,7 @@ def reviews():
         devdata.append(int(rom))
         devdata.append(str(color))
         # return redirect(url_for("device", data = devdata))
+        # this pass the value of the return element to the device page
         return redirect(url_for("device",data = dbinsert(devdata)))
     elif request.method == 'GET':
         return render_template("reviews.html")
