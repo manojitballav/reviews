@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %} Reviews {% endblock %}
+{% block content%} 
+<!-- <div class="table-responsive-sm">
+    <form action="#" method="POST">
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-dark">
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tr>
+            <td>Enter the device name</td>
+            <td><input type="text" name='dn' placeholder="Redmi Note 10 Pro Max"/></td>
+            </tr>
+            <tr>
+            <td>Enter the asin code</td>
+            <td><input type="text" name="asn" /></td>
+            </tr>
+            <tr>
+                <td>Enter RAM variant</td>
+                <td><input type="number" name="ram" /></td>
+            </tr>
+            <tr>
+                <td>Enter ROM variant</td>
+                <td><input type="number" name="rom" /></td>
+            </tr>
+            <tr>
+                <td>Enter color variant</td>
+                <td><input type="text" name="color" /></td>
+            </tr>
+        </table>
+        <p><input type="submit" value="submit" /></p>
+    </form>
+</div> -->
+<!-- Add function to check on the no data received scenarios -->
+<div class="container-fluid">
+    <h3>Enter the details of the product </h3>
+    <form class="align-items-center" action="#" method="POST">
+        <div class="row mb-3">
+        <label for="text" class="col-sm-2 col-form-label">Device</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="dn" placeholder="Mi 10 Pro">
+        </div>
+        </div>
+        <div class="row mb-3">
+        <label for="text" class="col-sm-2 col-form-label">Enter ASIN code</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name = "asn" placeholder="B07X4R4F4G"> 
+        </div>
+        </div>
+        <div class="row mb-3">
+            <label for="text" class="col-sm-2 col-form-label">Enter RAM Variant</label>
+            <div class="col-sm-4">
+            <input type="number" class="form-control" name = "ram" placeholder="3 GB"> 
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="text" class="col-sm-2 col-form-label">Enter ROM Variant</label>
+            <div class="col-sm-4">
+            <input type="number" class="form-control" name = "rom" placeholder="64 GB"> 
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="text" class="col-sm-2 col-form-label">Enter Color Variant</label>
+            <div class="col-sm-4">
+            <input type="text" class="form-control" name = "color" placeholder="Coral Red"> 
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<tr>Data passed: {{data}}</tr>
+    
+{% endblock %}

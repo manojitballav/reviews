@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{% block title %} Home {% endblock%}
+{% block content %}
+
+<tr>{{data}}</tr>
+
+<!-- <tr> Name is {{data}}</tr>
+{% for dict_item in data %}
+    <p>{{dict_item}}</p>
+    <p>{{dict_item.asin}}</p>
+    <p>{{dict_item.ram}}</p>
+    <p>{{dict_item.rom}}</p>
+    <p>{{dict_item.color}}</p>
+{% endfor %} -->
+
+<!-- {% for val in data %}
+    <tr>
+        <td>{{val}}</td>
+    </tr>
+{% endfor %} -->
+{% endblock %}
